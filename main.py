@@ -4,7 +4,8 @@ from discord.ext.commands.bot import Bot
 import os
 import json
 
-dir = os.getcwd()
+mytoken = os.environ.get('TOKEN')
+verfy1 = os.environ.get('verfy1')
 
 with open('setting.json','r',encoding='UTF-8') as jfile:
     jdata = json.load(jfile)
@@ -21,7 +22,7 @@ async def on_ready():
 
 @bot.command()
 async def load(ctx,ext,verfy : str = None):
-    if verfy == jdata["verfy1"]:
+    if verfy == verfy1 :
         bot.load_extension(f'cmds.{ext}')
         await ctx.send(f'Load{ext} success.')
     elif verfy == None:
@@ -31,7 +32,7 @@ async def load(ctx,ext,verfy : str = None):
 
 @bot.command()
 async def unload(ctx,ext,verfy : str = None):
-    if verfy == jdata["verfy1"]:
+    if verfy == verfy1 :
         bot.unload_extension(f'cmds.{ext}')
         await ctx.send(f'Unload{ext} success.')
     elif verfy == None:
@@ -41,7 +42,7 @@ async def unload(ctx,ext,verfy : str = None):
 
 @bot.command()
 async def reload(ctx,ext,verfy : str = None):
-    if verfy == jdata["verfy1"]:
+    if verfy == verfy1 :
         bot.reload_extension(f'cmds.{ext}')
         await ctx.send(f'ReLoad{ext} success.')
     elif verfy == None:
@@ -51,7 +52,7 @@ async def reload(ctx,ext,verfy : str = None):
     
 
 if __name__ ==  "__main__":
-    bot.run(jdata["TOKEN"])
+    bot.run(mytoken)
 
 
 
