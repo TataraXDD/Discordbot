@@ -6,12 +6,12 @@ import json
 
 dir = os.getcwd()
 
-with open(f'{dir}/setting.json','r',encoding='UTF-8') as jfile:
+with open('setting.json','r',encoding='UTF-8') as jfile:
     jdata = json.load(jfile)
 
 bot = commands.Bot(command_prefix='[', intents = discord.Intents.all())
 
-for filename in os.listdir(f'{dir}/cmds'):
+for filename in os.listdir('cmds'):
     if filename.endswith('.py'):
         bot.load_extension(f'cmds.{filename[:-3]}')
 
