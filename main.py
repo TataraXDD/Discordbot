@@ -52,7 +52,7 @@ async def reload(ctx,ext,verfy : str = None):
     
 
 if __name__ ==  "__main__":
-    bot.run(mytoken)
+    bot.run('NzY5MjE0OTYxNjYyNTU4MjE4.X5LxQg.Ht70RPd0zhowxKUwD5nwFB3acTc')
 
 
 
