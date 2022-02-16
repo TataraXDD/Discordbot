@@ -7,17 +7,25 @@ import json
 mytoken = os.environ.get('TOKEN')
 verfy1 = os.environ.get('verfy1')
 
+
+<<<<<<< HEAD
 with open('setting.json','r',encoding='UTF-8') as jfile:
     jdata = json.load(jfile)
+=======
+# with open('setting.json','r',encoding='UTF-8') as jfile:
+#     jdata = json.load(jfile)
+>>>>>>> e8f0596534cd8135abd99b18231f6e72b6b376da
 
 bot = commands.Bot(command_prefix='[', intents = discord.Intents.all())
 
-for filename in os.listdir('cmds'):
+for filename in os.listdir(r'D:\Vscode\Github\Discordbot\cmds'):
     if filename.endswith('.py'):
         bot.load_extension(f'cmds.{filename[:-3]}')
 
 @bot.event
 async def on_ready():
+    activity = discord.Game(name="و(*`▽´)٩")
+    await bot.change_presence(status=discord.Status.online, activity=activity)
     print(">>Bot is online<<")
 
 @bot.command()
@@ -52,7 +60,11 @@ async def reload(ctx,ext,verfy : str = None):
     
 
 if __name__ ==  "__main__":
-    bot.run('NzY5MjE0OTYxNjYyNTU4MjE4.X5LxQg.Ht70RPd0zhowxKUwD5nwFB3acTc')
+<<<<<<< HEAD
+    bot.run(mytoken)
+=======
+    bot.run('NzY5MjE0OTYxNjYyNTU4MjE4.X5LxQg.CEV9xVfwJNM_-AzC88Pc7aHd7dM')
+>>>>>>> e8f0596534cd8135abd99b18231f6e72b6b376da
 
 
 

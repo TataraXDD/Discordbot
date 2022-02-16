@@ -1,3 +1,4 @@
+from os import name
 from discord.ext import commands
 from core.classess import Cog_Extension as CE
 import datetime
@@ -26,7 +27,7 @@ class React(CE):
 
         new_name = dount[f'{wkday}']
         channel = self.bot.get_channel(jdata['hollow_channal']) 
-        await channel.edit(name=new_name)
+        await channel.edit(name = new_name)
         await ctx.channel.send(f'I want to eat {wkday} dounts >////< {new_name}')
 
 
