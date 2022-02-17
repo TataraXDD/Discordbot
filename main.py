@@ -8,13 +8,8 @@ mytoken = os.environ.get('TOKEN')
 verfy1 = os.environ.get('verfy1')
 
 
-<<<<<<< HEAD
-with open('setting.json','r',encoding='UTF-8') as jfile:
-    jdata = json.load(jfile)
-=======
 # with open('setting.json','r',encoding='UTF-8') as jfile:
 #     jdata = json.load(jfile)
->>>>>>> e8f0596534cd8135abd99b18231f6e72b6b376da
 
 bot = commands.Bot(command_prefix='[', intents = discord.Intents.all())
 
@@ -60,11 +55,7 @@ async def reload(ctx,ext,verfy : str = None):
     
 
 if __name__ ==  "__main__":
-<<<<<<< HEAD
     bot.run(mytoken)
-=======
-    bot.run('NzY5MjE0OTYxNjYyNTU4MjE4.X5LxQg.CEV9xVfwJNM_-AzC88Pc7aHd7dM')
->>>>>>> e8f0596534cd8135abd99b18231f6e72b6b376da
 
 
 
