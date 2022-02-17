@@ -13,7 +13,7 @@ verfy1 = os.environ.get('verfy1')
 
 bot = commands.Bot(command_prefix='[', intents = discord.Intents.all())
 
-for filename in os.listdir(r'D:\Vscode\Github\Discordbot\cmds'):
+for filename in os.listdir(r'cmds'):
     if filename.endswith('.py'):
         bot.load_extension(f'cmds.{filename[:-3]}')
 
