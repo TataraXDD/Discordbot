@@ -8,8 +8,8 @@ mytoken = os.environ.get('TOKEN')
 verfy1 = os.environ.get('verfy1')
 
 
-# with open('setting.json','r',encoding='UTF-8') as jfile:
-#     jdata = json.load(jfile)
+with open('setting.json','r',encoding='UTF-8') as jfile:
+    jdata = json.load(jfile)
 
 bot = commands.Bot(command_prefix='[', intents = discord.Intents.all())
 
