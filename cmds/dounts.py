@@ -4,7 +4,7 @@ from core.classess import Cog_Extension as CE
 import datetime
 import json
 
-with open('setting.json','r',encoding='UTF-8') as jfile:
+with open(r'Github\Discordbot\setting.json','r',encoding='UTF-8') as jfile:
     jdata = json.load(jfile)
     
 

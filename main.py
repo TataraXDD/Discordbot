@@ -19,7 +19,7 @@ for filename in os.listdir(r'cmds'):
 
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="و(*`▽´)٩")
+    activity = discord.Game(name="Mahoushoujo Contractor")
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print(">>Bot is online<<")
 
@@ -31,7 +31,7 @@ async def load(ctx,ext,verfy : str = None):
     elif verfy == None:
         await ctx.send('Who are you! ')
     else :
-        await ctx.send('You are not Tatar, go away! 	(ﾒ｀ﾛ´)/')
+        await ctx.send('You are not Tatara, go away! 	(ﾒ｀ﾛ´)/')
 
 @bot.command()
 async def unload(ctx,ext,verfy : str = None):
@@ -41,7 +41,7 @@ async def unload(ctx,ext,verfy : str = None):
     elif verfy == None:
         await ctx.send('Who are you! ')
     else :
-        await ctx.send('You are not Tatar, go away! 	(ﾒ｀ﾛ´)/')
+        await ctx.send('You are not Tatara, go away! 	(ﾒ｀ﾛ´)/')
 
 @bot.command()
 async def reload(ctx,ext,verfy : str = None):
@@ -51,7 +51,7 @@ async def reload(ctx,ext,verfy : str = None):
     elif verfy == None:
         await ctx.send('Who are you! ')
     else :
-        await ctx.send('You are not Tatar, go away! 	(ﾒ｀ﾛ´)/')
+        await ctx.send('You are not Tatara, go away! 	(ﾒ｀ﾛ´)/')
     
 
 if __name__ ==  "__main__":
